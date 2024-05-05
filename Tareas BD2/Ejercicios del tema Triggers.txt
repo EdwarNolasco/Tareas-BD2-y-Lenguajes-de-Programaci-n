@@ -1,0 +1,116 @@
+CREATE TABLE aaUno
+(
+    gid SERIAL PRIMARY KEY,
+    elemento VARCHAR (254),
+    area integer,
+	fecha_creacion TIMESTAMP WITH TIME ZONE,
+	fecha_mod TIMESTAMP WITH TIME ZONE
+    --geom GEOMETRY(MultiPolygon,25830)
+);
+
+select * from aaUno;
+
+insert into aaUno (gid, elemento, area )
+values (1, 'prueba', 34)
+
+
+CREATE OR REPLACE FUNCTION  public.created_fecha_column()
+  RETURNS trigger AS
+$BODY$
+BEGIN
+    NEW. fecha_creacion = now();
+    RETURN NEW;	
+END;
+$BODY$
+  LANGUAGE plpgsql;
+  
+  
+ CREATE OR REPLACE FUNCTION public.edited_fecha_column()
+  RETURNS trigger AS
+$BODY$
+BEGIN
+    NEW. fecha_mod = now();
+    RETURN NEW;	
+END;
+$BODY$
+  LANGUAGE plpgsql;
+  
+ CREATE TRIGGER fecha_alta
+  BEFORE INSERT
+  ON aaUno
+  FOR EACH ROW
+  EXECUTE PROCEDURE public.created_fecha_column();
+  
+ CREATE TRIGGER fecha_mod
+  BEFORE UPDATE
+  ON aaUno
+  FOR EACH ROW
+  EXECUTE PROCEDURE public.edited_fecha_column();
+  
+ insert into aaUno (gid, elemento, area )
+values (3, 'prueba', 34)
+  
+  select * from aaUno;
+  
+  --update aaUno set elemento = 'gid + 1'
+  
+-- 1 Cree los siguientes campos en sale_order: cuenta_lineas, suma_monto
+
+
+-- 2 Haga uno o más triggers; que permita actualizar cuenta_lineas en sale_order: 
+     Cada vez que agregue o borre una línea en sale_order_line, cuenta_lineas se debe sumar o restar
+
+
+-- 3 Haga uno o más triggers; que permita actualizar suma_monto en sale_order: 
+     Cada vez que agregue o borre una línea en sale_order_line, suma_monto se debe actualizar
+     con la suma de los montos de las líneas
+
+-- 1. Crear los campos en la tabla sale_order
+ALTER TABLE sale_order
+ADD cuenta_lineas INTEGER,
+ADD suma_monto DECIMAL(10,2);
+
+-- 2. Crear el trigger para actualizar cuenta_lineas
+CREATE OR REPLACE FUNCTION actualizar_cuenta_lineas()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF TG_OP = 'INSERT' THEN
+        UPDATE sale_order
+        SET cuenta_lineas = cuenta_lineas + 1
+        WHERE id = NEW.order_id;
+    ELSIF TG_OP = 'DELETE' THEN
+        UPDATE sale_order
+        SET cuenta_lineas = cuenta_lineas - 1
+        WHERE id = OLD.order_id;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trig_actualizar_cuenta_lineas
+AFTER INSERT OR DELETE ON sale_order_line
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_cuenta_lineas();
+
+-- 3. Crear el trigger para actualizar suma_monto
+CREATE OR REPLACE FUNCTION actualizar_suma_monto()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF TG_OP = 'INSERT' THEN
+        UPDATE sale_order
+        SET suma_monto = suma_monto + NEW.monto
+        WHERE id = NEW.order_id;
+    ELSIF TG_OP = 'DELETE' THEN
+        UPDATE sale_order
+        SET suma_monto = suma_monto - OLD.monto
+        WHERE id = OLD.order_id;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trig_actualizar_suma_monto
+AFTER INSERT OR DELETE ON sale_order_line
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_suma_monto();
+

@@ -1,0 +1,39 @@
+-- 1 Clientes que no tienen ordenes
+select rp.name 
+from res_partner rp
+where rp.id NOT IN (SELECT partner_id FROM sale_order);
+
+--***************************************
+--2 Actualizar campo (identidad)VAT a Res_partner
+UPDATE res_partner
+SET vat = 'NO DISPONIBLE'
+WHERE vat IS NULL;
+--select name, vat from res_partner
+--***************************************
+--3 Agregar una columna a res_partner
+Alter table res_partner
+ADD puntos numeric(10,2);
+--select puntos from res_partner
+--************************************
+--4 Calcular puntos
+update res_partner
+set puntos =(select SUM(so.amount_untaxed*0.10) 
+			 from sale_order so 
+			 where so.partner_id = res_partner.id);
+--Prueba
+/*
+ select rp.name,rp.puntos
+ from res_partner rp 
+ left join sale_order so on rp.id=so.partner_id
+ */
+ --************************************************************
+ -- 5 quitar impuestos EN MI TABLA YA ESTABAN EN 0.00 amount_tax
+--select price_tax from sale_order_line
+update sale_order_line
+set price_tax='0.00',
+price_subtotal=(price_subtotal+ (price_unit * product_uom_qty*price_tax));
+	   
+ -- 6 agregar impuestos 
+update sale_order_line
+set price_tax='0.15',
+price_subtotal=(price_subtotal+ (price_unit * product_uom_qty*price_tax));
