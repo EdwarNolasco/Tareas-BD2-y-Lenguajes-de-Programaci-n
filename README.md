@@ -30,15 +30,15 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
 
    e-) Exposición de Elixir:
 
-   Link: https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20BD2/Elixir%20-%20Exposici%C3%B3n.pptx
+   Link: https://docs.google.com/presentation/d/1FDpf-hHPRl2L209KM6y4IZSFu8_T4YG0/edit?usp=sharing&ouid=109379785194224692043&rtpof=true&sd=true
 
    f-) Exposición de Jaspersoft:
 
-   Link: https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20BD2/Jaspersoft%20-%20Exposici%C3%B3n.pptx
+   Link: https://docs.google.com/presentation/d/1-eQg9weQ--OvCiogB6r5HLf5-6557728/edit?usp=sharing&ouid=109379785194224692043&rtpof=true&sd=true
 
    g-) Tarea de Looker Studio:
 
-   Link: https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20BD2/Looker%20Studio.pdf
+   Link: https://drive.google.com/file/d/1K1NKP69neWECquN2pc5JYtjFTNU2UOui/view?usp=sharing
 
    -------------------- Tareas de Lenguajes de Programación --------------------
 
