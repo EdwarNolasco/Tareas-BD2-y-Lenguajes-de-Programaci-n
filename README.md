@@ -8,6 +8,8 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
 
    Link de la Documentación: [Documentación](https://docs.google.com/document/d/1mFygPrj6lSseUIzQixMrxu8dPdaocKc4Zx8dSZWR_JU/edit?hl=es "Documentación")
 
+   Nuestra aplicación ya funciona en un servidor de producción. puede visitarlo [aquí](https://personalfinace.netlify.app/history)
+
 -------------------- Tareas de BD2 --------------------
 
 2- Las tareas de BD2 se encuentran en [Tareas BD2](https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/tree/main/Tareas%20BD2 "Tareas BD2") que contiene:
