@@ -42,7 +42,7 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
    
    -------------------- Tareas de Lenguajes de Programación --------------------
 
-3- Las tareas de Lenguajes de Programación se encuentran en https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/tree/main/Tareas%20Lenguajes%20de%20Programacion y contienen:
+3- Las tareas de Lenguajes de Programación se encuentran en [Lenguajes de Programación](https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/tree/main/Tareas%20Lenguajes%20de%20Programacion "Lenguajes de Programación") y contienen:
 
    a-) Exposición de LISP:
 
