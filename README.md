@@ -6,7 +6,7 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
 
    Link al repositorio: https://github.com/JackyrDC/FinancialApp
 
-   Link de la Documentación: https://docs.google.com/document/d/1mFygPrj6lSseUIzQixMrxu8dPdaocKc4Zx8dSZWR_JU/edit?hl=es
+   Link de la Documentación: [Documentación](https://docs.google.com/document/d/1mFygPrj6lSseUIzQixMrxu8dPdaocKc4Zx8dSZWR_JU/edit?hl=es "Documentación")
 
 -------------------- Tareas de BD2 --------------------
 
