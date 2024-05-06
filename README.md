@@ -46,4 +46,4 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
 
    a-) Exposición de LISP:
 
-   Link: https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20Lenguajes%20de%20Programacion/LISP%20-%20Exposici%C3%B3n.pptx
+   Link: https://docs.google.com/presentation/d/1ARrc7ViK0audq6d-Ql1c37LZY44YaBo-/edit?usp=sharing&ouid=109379785194224692043&rtpof=true&sd=true
