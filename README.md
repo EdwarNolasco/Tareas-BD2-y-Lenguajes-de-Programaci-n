@@ -1,4 +1,4 @@
-Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Lenguajes de Programación.
+Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Lenguajes de Programación de la I PAC 2024.
 
 -------------------- Proyecto Principal de ambas clases --------------------
 
