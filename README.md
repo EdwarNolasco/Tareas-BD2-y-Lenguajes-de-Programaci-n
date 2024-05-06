@@ -14,7 +14,7 @@ Aquí se encuentran de forma detallada todas las tareas de Bases de Datos 2 y Le
 
    a-) Guía de Ejericicios de ConsultasSQL
 
-   Link: https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20BD2/Guia%20de%20Ejercicios%20de%20Consultas%20SQL.sql
+   Link: [ConsultasSQL](https://github.com/EdwarNolasco/Tareas-BD2-y-Lenguajes-de-Programaci-n/blob/main/Tareas%20BD2/Guia%20de%20Ejercicios%20de%20Consultas%20SQL.sql "ConsultasSQL")
        
    b-) Ejercicios del Tema Triggers: 
 
